@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue_consumer.xsd">
+    <consumer name="productCategoryPath" queue="categoryPathQueue"
+              connection="amqp" consumerInstance="Magento\Framework\MessageQueue\Consumer" maxMessages="5000" handler="Codilar\CategoryForGTM\Model\Consumer::processMessage"/>
+</config>
